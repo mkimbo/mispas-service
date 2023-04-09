@@ -2,7 +2,7 @@ import { Card, CardActionArea, Typography } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { styled } from "@mui/system";
 import Image from "next/image";
-import sampleMissing from "../../../public/missing-person.webp";
+import sampleMissing from "../public/missing-person.webp";
 import { useTranslation } from "../i18n";
 import Link from "next/link";
 
