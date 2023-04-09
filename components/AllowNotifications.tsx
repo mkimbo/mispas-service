@@ -7,14 +7,14 @@ import axios from "axios";
 import { getMessaging, getToken } from "firebase/messaging";
 import localforage from "localforage";
 import { useAuthUser } from "next-firebase-auth";
-import { messaging } from "../utils/firebase";
+//import { messaging } from "../utils/firebase";
 
 type Props = {};
 
 export default function AllowNotifications({}: Props) {
   const t = useTranslation();
   const authUser = useAuthUser();
-
+  const messaging = getMessaging();
   const handleSaveToken = async () => {
     if (authUser.email) {
       try {
