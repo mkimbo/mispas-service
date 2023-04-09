@@ -8,17 +8,15 @@ import { getMessaging, getToken } from "firebase/messaging";
 import localforage from "localforage";
 import { useAuthUser } from "next-firebase-auth";
 import { getApps, initializeApp } from "firebase/app";
-import { messaging } from "../utils/firebase";
-
+import { firebaseConfig } from "../config/firebase.config";
+const environment = process.env.NODE_ENV || "development";
 type Props = {};
 
 export default function AllowNotifications({}: Props) {
   const t = useTranslation();
   const authUser = useAuthUser();
-  // const app = !getApps().length
-  // ? initializeApp(firebaseConfi)
-  // : getApps()[0];
-  // const messaging = getMessaging();
+  const app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
+  const messaging = environment !== "development" ? getMessaging(app) : null;
   const handleSaveToken = async () => {
     if (authUser.email) {
       try {

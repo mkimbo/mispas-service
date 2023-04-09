@@ -24,10 +24,9 @@ import {
   PhoneAuthProvider,
   //verify
 } from "firebase/auth";
-import { getMessaging } from "firebase/messaging";
 //import firebase from "firebase/app";
 //import { Auth } from "googleapis";
-const environment = process.env.NODE_ENV || "development";
+
 const firebaseApp =
   getApps().length === 1 ? getApps()[0] : initializeApp(firebaseConfig);
 //firebase.initializeApp(firebaseConfig)
@@ -35,9 +34,6 @@ const firebaseApp =
 export const storage = getStorage(firebaseApp);
 export const db = getFirestore(firebaseApp);
 export const auth = getAuth(firebaseApp);
-
-export const messaging =
-  environment !== "development" ? getMessaging(firebaseApp) : null;
 
 export const uploadFileToCloud = async (file: File) => {
   try {
