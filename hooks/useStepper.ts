@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { IReportMissing } from "../../../utils/models";
+import { IReportMissing } from "../utils/models";
 
 export type TFormState = {
   activeStep: number;

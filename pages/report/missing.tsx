@@ -20,7 +20,7 @@ import { z } from "zod";
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form";
 import MissingPersonDetails from "./components/MissingPersonDetails";
 import { merge } from "lodash";
-import { useStepper } from "./hooks/useStepper";
+import { useStepper } from "../../hooks/useStepper";
 import StepperActions from "./components/StepperActions";
 import OtherDetails from "./components/OtherDetails";
 import Link from "next/link";

@@ -3,7 +3,7 @@ import { Button, Box } from "@mui/material";
 import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import { getGeoHash, loadScript } from "../../../utils/functions";
 import { uploadFileToCloud } from "../../../utils/firebase";
-import { TFormState } from "../hooks/useStepper";
+import { TFormState } from "../../../hooks/useStepper";
 import { UseFormHandleSubmit } from "react-hook-form";
 import { TStep1Form, TStep2Form } from "../missing";
 import { useRouter } from "next/router";
