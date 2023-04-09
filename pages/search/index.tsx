@@ -8,7 +8,7 @@ import {
 import { Box, Container, Typography } from "@mui/material";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-hooks-web";
-import SearchHit from "./components/SearchHit";
+import SearchHit from "../../components/SearchHit";
 import { useTranslation } from "../../i18n";
 import AppLayout from "../../layout/AppLayout";
 

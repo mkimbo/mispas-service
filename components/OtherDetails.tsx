@@ -14,9 +14,9 @@ import {
   TextField,
 } from "@mui/material";
 import { useFormContext, Controller, useWatch } from "react-hook-form";
-import { useTranslation } from "../../../i18n";
+import { useTranslation } from "../i18n";
 import { MenuItem, Select } from "@mui/material";
-import policeStations from "../../../assets/pStations.json";
+import policeStations from "../assets/pStations.json";
 import _ from "lodash";
 import AutoCompleteSelect, { TOption } from "./AutoCompleteSelect";
 

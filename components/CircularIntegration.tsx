@@ -8,7 +8,7 @@ import Fab from "@mui/material/Fab";
 import CheckIcon from "@mui/icons-material/Check";
 import UploadIcon from "@mui/icons-material/CloudUpload";
 import WarnIcon from "@mui/icons-material/Warning";
-import { useTranslation } from "../../../i18n";
+import { useTranslation } from "../i18n";
 
 interface IProps {
   handleClick: () => void;

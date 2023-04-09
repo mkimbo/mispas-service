@@ -1,16 +1,16 @@
 import React, { FunctionComponent, useRef } from "react";
 import { Button, Box } from "@mui/material";
 import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
-import { getGeoHash, loadScript } from "../../../utils/functions";
-import { uploadFileToCloud } from "../../../utils/firebase";
-import { TFormState } from "../../../hooks/useStepper";
+import { getGeoHash, loadScript } from "../utils/functions";
+import { uploadFileToCloud } from "../utils/firebase";
+import { TFormState } from "../hooks/useStepper";
 import { UseFormHandleSubmit } from "react-hook-form";
-import { TStep1Form, TStep2Form } from "../missing";
 import { useRouter } from "next/router";
 import LoadingButton from "@mui/lab/LoadingButton";
 import SaveIcon from "@mui/icons-material/Save";
 import { AuthUser, useAuthUser } from "next-firebase-auth";
-import { saveMissingPerson } from "../../../utils/axios";
+import { saveMissingPerson } from "../utils/axios";
+import { TStep1Form, TStep2Form } from "../pages/report/missing";
 
 interface IProps {
   auth: AuthUser;

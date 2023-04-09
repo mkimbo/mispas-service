@@ -3,16 +3,12 @@ import Grid from "@mui/material/Grid";
 import { FormControl, InputLabel } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
-import {
-  useFormContext,
-  Controller,
-  useWatch,
-} from "react-hook-form";
-import { useTranslation } from "../../../i18n";
+import { useFormContext, Controller, useWatch } from "react-hook-form";
 import { MenuItem, Select } from "@mui/material";
 import LocationInput, { PlaceType } from "./LocationInput";
 import CircularIntegration from "./CircularIntegration";
 import DateInput from "./DateInput";
+import { useTranslation } from "../i18n";
 
 export default function MissingPersonDetails() {
   const [loading, setLoading] = useState(false);
@@ -159,10 +155,7 @@ export default function MissingPersonDetails() {
         <DateInput name="lastSeenDate" label="Last seen date" />
       </Grid>
       <Grid item xs={12}>
-        <LocationInput
-          name="lastSeenLocation"
-          label="Last seen location"
-        />
+        <LocationInput name="lastSeenLocation" label="Last seen location" />
       </Grid>
       <Grid item xs={12}>
         <Controller

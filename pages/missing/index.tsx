@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Container } from "@mui/material";
 import { useTranslation } from "../../i18n";
 import { styled } from "@mui/material";
-import MissingCard from "./components/MissingCard";
+import MissingCard from "../../components/MissingCard";
 import {
   useAuthUser,
   withAuthUser,
