@@ -53,7 +53,7 @@ const navLinks: TNavLink[] = [
   },
   {
     text: "Utilities",
-    href: "/utilities",
+    href: "/statistics",
     icon: <Public />,
   },
 ];

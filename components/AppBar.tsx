@@ -45,14 +45,14 @@ const NavBar: React.FunctionComponent<NavBarProps> = ({
   const router = useRouter();
   const t = useTranslation();
   //const { logout, user } = useAuth();
-  React.useEffect(() => {
+  /*  React.useEffect(() => {
     const langCode = localStorage.getItem("mispas-language-code");
     if (langCode) {
       dispatch({ type: "SET_LANG_CODE", payload: langCode });
     } else {
       //dispatch({ type: "SET_LANG_CODE", payload: "en" });
     }
-  }, []);
+  }, []); */
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
