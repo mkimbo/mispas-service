@@ -20,7 +20,7 @@ import {
   ThemeMode,
 } from "../styles/theme";
 import Dashboard from "../components/Dashboard";
-import { GlobalProvider } from "../context/GlobalContext";
+import { GlobalProvider, useAppDispatch } from "../context/GlobalContext";
 
 initAuth();
 const clientSideEmotionCache = createEmotionCache();
@@ -33,11 +33,19 @@ export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [mode, setMode] = React.useState<ThemeMode>();
-
+  const dispatch = useAppDispatch();
   React.useEffect(() => {
     setMode(prefersDarkMode ? "dark" : "light");
   }, [prefersDarkMode]);
 
+  React.useCallback(() => {
+    const langCode = localStorage.getItem("mispas-language-code");
+    if (langCode) {
+      dispatch({ type: "SET_LANG_CODE", payload: langCode });
+    } else {
+      //dispatch({ type: "SET_LANG_CODE", payload: "en" });
+    }
+  }, []);
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
