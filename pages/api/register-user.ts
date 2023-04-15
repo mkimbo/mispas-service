@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { firebaseAdmin } from "../../config/firebaseAdmin";
 
 export const config = {
-  runtime: "edge",
+  runtime: "experimental-edge",
 };
 const db = firebaseAdmin.firestore();
 const auth = firebaseAdmin.auth();

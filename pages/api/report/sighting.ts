@@ -6,7 +6,7 @@ import {
   sendAlertToUserDevices,
 } from "../../../config/firebaseAdmin";
 export const config = {
-  runtime: "edge",
+  runtime: "experimental-edge",
 };
 
 const db = firebaseAdmin.firestore();
