@@ -4,6 +4,9 @@ import { nanoid } from "nanoid";
 import { NextApiRequest, NextApiResponse } from "next";
 import { firebaseAdmin } from "../../../config/firebaseAdmin";
 import { sendNotifications } from "../../../service/NotificationService";
+export const config = {
+  runtime: "edge",
+};
 const db = firebaseAdmin.firestore();
 initAuth();
 

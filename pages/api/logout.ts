@@ -1,7 +1,9 @@
 import { unsetAuthCookies } from "next-firebase-auth";
 import { NextApiRequest, NextApiResponse } from "next";
 import initAuth from "../../utils/initAuth";
-
+export const config = {
+  runtime: "edge",
+};
 initAuth();
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {

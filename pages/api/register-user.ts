@@ -2,11 +2,13 @@ import { AuthUser, getUserFromCookies } from "next-firebase-auth";
 import initAuth from "../../utils/initAuth";
 import { NextApiRequest, NextApiResponse } from "next";
 import { firebaseAdmin } from "../../config/firebaseAdmin";
-import { google } from "googleapis";
+
+export const config = {
+  runtime: "edge",
+};
 const db = firebaseAdmin.firestore();
 const auth = firebaseAdmin.auth();
 initAuth();
-
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   let user: AuthUser;
   try {

@@ -2,6 +2,10 @@ import { AuthUser, getUserFromCookies } from "next-firebase-auth";
 import initAuth from "../../utils/initAuth";
 import { NextApiRequest, NextApiResponse } from "next";
 import { firebaseAdmin } from "../../config/firebaseAdmin";
+export const config = {
+  runtime: "edge",
+};
+
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilioClient = require("twilio")(accountSid, authToken);

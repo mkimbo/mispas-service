@@ -5,6 +5,10 @@ import {
   firebaseAdmin,
   sendAlertToUserDevices,
 } from "../../../config/firebaseAdmin";
+export const config = {
+  runtime: "edge",
+};
+
 const db = firebaseAdmin.firestore();
 initAuth();
 
